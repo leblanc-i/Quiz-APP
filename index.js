@@ -1,3 +1,16 @@
+class Question {
+  constructor (text, choices, answer) {
+    this.text = text;
+    this.choices = choices;
+    this.answer = answer;
+  }
+
+  // Fonction qui va nous permettre de savoir si l'utilisateur à bien repondu
+  isCorrect(choice) {
+    return choice === this.answer;
+  }
+}
+
 const questions = [
   new Question(
     "Quelle méthode Javascript permet de filtrer les éléments d'un tableau",
@@ -20,3 +33,11 @@ const questions = [
     "Math.round()"
   ),
 ];
+
+class Quiz {
+  constructor (questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.currentQuestionIndex = 0;
+  }
+}
