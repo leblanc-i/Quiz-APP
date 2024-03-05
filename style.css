@@ -63,6 +63,9 @@ body #progress {
   font-size: 1.3rem;
   color: #ffa502;
 }
+body #score {
+  margin-top: 1.5rem;
+}
 body #again {
   background: transparent;
   padding: 10px 20px;

@@ -108,6 +108,8 @@ const display = {
   },
   question: function () {
     this.elementShown("question", quiz.getCurrentQuestion().text);
+    this.elementShown("score", `Vous avez : ${quiz.score} / ${quiz.questions.length} Points`);
+
   },
   choices: function () {
     let choices = quiz.getCurrentQuestion().choices;
