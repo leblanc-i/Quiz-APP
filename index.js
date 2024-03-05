@@ -98,7 +98,6 @@ class Quiz {
 
   }
 }
-
 // On cree un objet qui va gerer l'affichage du Quiz
 const display = {
   // function qui prend en paramettre l'id et le text de la question
@@ -137,17 +136,35 @@ const display = {
   },
 
   endQuiz: function () {
-    let endQuizHtml = `
+
+    if (quiz.score >= 3) {
+
+      let endQuizHtml = `
       <h1>Quiz terminé</h1>
+      <h2 class="bravo">Bravo !!!</h2>
       <h3>Votre score est de : ${quiz.score} / ${quiz.questions.length} </h3>
       <button id="again">Recommencer</button>
-    `;
+      `;
     this.elementShown("quiz", endQuizHtml);
     let againBtn = document.getElementById("again");
     againBtn.addEventListener("click", () => {
       quiz.reset();
       quizApp();
     })
+  } else {
+
+    let endQuizHtml = `
+    <h1>Quiz terminé</h1>
+    <h3>Votre score est de : ${quiz.score} / ${quiz.questions.length} </h3>
+    <button id="again">Recommencer</button>
+    `;
+    this.elementShown("quiz", endQuizHtml);
+    let againBtn = document.getElementById("again");
+    againBtn.addEventListener("click", () => {
+    quiz.reset();
+    quizApp();
+  })
+  }
   },
 };
 

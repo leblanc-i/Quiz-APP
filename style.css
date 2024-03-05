@@ -66,6 +66,13 @@ body #progress {
 body #score {
   margin-top: 1.5rem;
 }
+body .bravo {
+  color: rgb(21, 170, 21);
+  font-style: italic;
+  font-size: 2rem;
+  margin-top: -1.3rem;
+  margin-bottom: 1rem;
+}
 body #again {
   background: transparent;
   padding: 10px 20px;
