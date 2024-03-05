@@ -12,6 +12,7 @@ body {
   align-items: center;
   justify-items: center;
   min-height: 100vh;
+  
   background: #2f3542;
   color: #dfe4ea;
 }
@@ -32,7 +33,7 @@ body .container .choices {
   display: flex;
   flex-wrap: wrap;
   margin: 3rem auto 3rem;
-  width: 500px;
+  width: 80%;
 }
 body .container .choices button {
   flex: 1 0 45%;
